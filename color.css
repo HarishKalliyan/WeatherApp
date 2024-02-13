@@ -3,6 +3,12 @@
     padding: 0;
     font-family: 'Poppins',sans-serif;
     box-sizing: border-box;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
 }
 
 body{
@@ -11,17 +17,33 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #1e293b;
+    background: #7abedec6;
 }
 .card{
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
     width: 600px;
-    background: linear-gradient(135deg,#00feba,#5b548a);
+    background: linear-gradient(135deg, #04a3ff, #ff5be1);
+    background-size: 170% 170%;
+    animation: gradient-animation 5s linear infinite;
     color: #fff;
     border-radius: 20px;
     padding: 40px 35px;
+    box-shadow: 10px 15px 5px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
+}@keyframes gradient-animation {
+    0% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
 }
-
 .search{
     width: 100%;
     display: flex;
